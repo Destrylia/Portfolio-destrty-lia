@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Destry Lia Sulistyowati — Aspiring Business Banking Officer. Portfolio for Officer Development Program applications." />
+<title>Destry Lia Sulistyowati — Business Banking Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0A2540;
+    --navy-soft: #1B3A5C;
+    --gold: #B68B47;
+    --gold-light: #D4B07A;
+    --cream: #FAF8F3;
+    --cream-warm: #F3EFE6;
+    --ink: #1E293B;
+    --muted: #64748B;
+    --rule: #E5E0D5;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Manrope', -apple-system, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .container {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Header / Nav */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: rgba(250, 248, 243, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--rule);
+    z-index: 100;
+    padding: 18px 0;
+  }
+  .nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+  }
+  .nav-brand {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 17px;
+    letter-spacing: 0.02em;
+    color: var(--navy);
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  @media (max-width: 720px) { .nav-links { display: none; } }
+
+  /* Hero */
+  .hero {
+    padding: 110px 0 90px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  .hero-eyebrow {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 36px;
+    height: 1px;
+    background: var(--gold);
+  }
+  .hero h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(38px, 6.5vw, 64px);
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--navy);
+    margin-bottom: 28px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 300;
+    color: var(--gold);
+  }
+  .hero-lede {
+    font-size: 19px;
+    line-height: 1.65;
+    color: var(--ink);
+    max-width: 640px;
+    margin-bottom: 40px;
+    font-weight: 400;
+  }
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    font-size: 14px;
+    color: var(--muted);
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+  }
+  .hero-meta strong {
+    color: var(--navy);
+    font-weight: 600;
+    margin-right: 8px;
+  }
+
+  /* Sections */
+  section {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section-eyebrow {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 18px;
+  }
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    color: var(--navy);
+    margin-bottom: 36px;
+    max-width: 720px;
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  /* About */
+  .about p {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 20px;
+    max-width: 720px;
+  }
+  .about p:last-child { margin-bottom: 0; }
+
+  /* Why Business Banking */
+  .why-banking {
+    background: var(--cream-warm);
+  }
+  .why-banking .pullquote {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-style: italic;
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: 1.4;
+    color: var(--navy);
+    padding: 28px 0 28px 32px;
+    border-left: 3px solid var(--gold);
+    margin: 32px 0;
+    max-width: 700px;
+  }
+  .why-banking p {
+    font-size: 16.5px;
+    line-height: 1.75;
+    color: var(--ink);
+    margin-bottom: 18px;
+    max-width: 720px;
+  }
+
+  /* Experience */
+  .exp-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 40px;
+    padding: 32px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .exp-item:first-of-type { border-top: none; padding-top: 0; }
+  .exp-period {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding-top: 4px;
+  }
+  .exp-role {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: var(--navy);
+    margin-bottom: 4px;
+    line-height: 1.3;
+  }
+  .exp-org {
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 16px;
+  }
+  .exp-desc {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  @media (max-width: 720px) {
+    .exp-item { grid-template-columns: 1fr; gap: 12px; }
+    .exp-period { padding-top: 0; }
+  }
+
+  /* Projects */
+  .project {
+    padding: 48px 0;
+    border-top: 1px solid var(--rule);
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 32px;
+  }
+  .project:first-of-type { border-top: none; padding-top: 0; }
+  .project-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--gold);
+    font-style: italic;
+  }
+  .project-body { }
+  .project-title {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 1.25;
+    color: var(--navy);
+    margin-bottom: 14px;
+  }
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  .project-tag {
+    font-size: 12px;
+    padding: 4px 12px;
+    background: var(--cream-warm);
+    color: var(--navy);
+    border: 1px solid var(--rule);
+    border-radius: 100px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+  .project-block {
+    margin-bottom: 18px;
+  }
+  .project-block-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gold);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .project-block p {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink);
+  }
+  @media (max-width: 720px) {
+    .project { grid-template-columns: 1fr; gap: 12px; }
+    .project-num { font-size: 36px; }
+  }
+
+  /* Leadership */
+  .leadership-grid {
+    display: grid;
+    gap: 28px;
+  }
+  .leader-card {
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .leader-card:first-of-type { border-top: none; padding-top: 0; }
+  .leader-role {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .leader-org {
+    font-size: 13px;
+    color: var(--gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+  .leader-desc {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: var(--ink);
+    max-width: 720px;
+  }
+
+  /* Certifications */
+  .cert-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .cert-item {
+    padding: 18px 20px;
+    background: var(--cream-warm);
+    border-left: 3px solid var(--gold);
+    border-radius: 2px;
+  }
+  .cert-name {
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 15px;
+    margin-bottom: 4px;
+  }
+  .cert-issuer {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  /* Contact */
+  .contact {
+    background: var(--navy);
+    color: var(--cream);
+    border-bottom: none;
+    text-align: left;
+  }
+  .contact .section-title { color: var(--cream); }
+  .contact .section-eyebrow { color: var(--gold-light); }
+  .contact-lede {
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--cream);
+    margin-bottom: 36px;
+    max-width: 640px;
+    opacity: 0.92;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+  }
+  .contact-item-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold-light);
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .contact-item-value a {
+    color: var(--cream);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+  .contact-item-value a:hover { border-bottom-color: var(--gold-light); }
+
+  /* Footer */
+  footer {
+    background: var(--navy);
+    color: rgba(250, 248, 243, 0.6);
+    padding: 28px 0 32px;
+    font-size: 13px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="nav-brand">Destry Lia Sulistyowati</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#why">Why Banking</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-eyebrow">Officer Development Program · Business Banking</div>
+    <h1>Bridging data, operations, and <em>customer needs</em> for Indonesia's business banking future.</h1>
+    <p class="hero-lede">
+      Bachelor of Information and Communication Technology graduate from Asia e University Malaysia and Universitas Indonesia Joint Degree Program. Hands-on internship experience at two state-owned enterprises including Bank Rakyat Indonesia. Targeting Officer Development Program — Business Banking to translate digital fluency and stakeholder management into measurable impact for SME and regional economic development.
+    </p>
+    <div class="hero-meta">
+      <div><strong>Location</strong>Depok, Indonesia</div>
+      <div><strong>GPA</strong>3.66 / 4.00</div>
+      <div><strong>Status</strong>Open to ODP opportunities</div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-eyebrow">01 — About</div>
+    <h2 class="section-title">A fresh graduate with two BUMN internships, a data analytics certification, and a leadership track record across three organizations.</h2>
+    <p>
+      I graduated from the joint degree program between Asia e University Malaysia and CCIT Faculty of Engineering Universitas Indonesia with a cumulative GPA of 3.66/4.00. My academic foundation sits in information and communication technology, with applied coursework in project management, IT strategy, and information management systems.
+    </p>
+    <p>
+      Across 2025, I completed two internships at state-owned enterprises — first as IT Support Specialist at Bank Rakyat Indonesia, where I observed the engine room of retail banking, and second as Information Systems and Business Solutions Intern at Sucofindo, where I learned how business advisory services operate at scale. These experiences gave me an unusual angle on banking: I have seen the technical backbone that makes branch banking possible, the compliance frameworks that protect customer trust, and the operational rhythms of a regulated state-owned enterprise.
+    </p>
+    <p>
+      Outside of academic and professional work, I have served as Vice Manager of Human Resources at Universitas Indonesia Achievement Community, Vice President of PIK-R Depok Jaya, and Public Relations Coordinator at CCIT Squad — roles that developed my capacity in talent development, community engagement, and stakeholder communication.
+    </p>
+  </div>
+</section>
+
+<section id="why" class="why-banking">
+  <div class="container">
+    <div class="section-eyebrow">02 — Why Business Banking</div>
+    <h2 class="section-title">Business banking is where <em>finance meets local economy</em>.</h2>
+    <p>
+      Every UMKM that secures the right working capital, every local entrepreneur that scales because they accessed a properly structured credit line, contributes to a broader story of inclusive regional growth. Business Banking sits at the intersection of customer empathy, financial analysis, and operational discipline — three competencies that I want to develop deliberately and intensively.
+    </p>
+    <div class="pullquote">
+      "I do not see my technology background as a limitation. I see it as a foundation for reading data, understanding systems, and communicating with digital banking teams — competencies that will become more, not less, important in business banking."
+    </div>
+    <p>
+      Bank BTN's mandate is uniquely positioned. Beyond its dominance in KPR, BTN is actively expanding its footprint in business banking and UMKM segments. This is the segment where ODP graduates can make the most meaningful contribution to Indonesia's regional economy. I want to be part of that mission.
+    </p>
+    <p>
+      I am ready to be placed anywhere in Indonesia. Geographic mobility is not a constraint for me — it is an opportunity to understand the heterogeneity of Indonesia's business landscape directly, from the ground.
+    </p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-eyebrow">03 — Banking-Relevant Experience</div>
+    <h2 class="section-title">Two state-owned enterprise internships across banking operations and business advisory.</h2>
+
+    <div class="exp-item">
+      <div class="exp-period">May 2025 — Nov 2025</div>
+      <div>
+        <h3 class="exp-role">Information Systems and Business Solutions Intern</h3>
+        <div class="exp-org">PT Sucofindo (Persero) · Jakarta</div>
+        <p class="exp-desc">
+          Supported business continuity of state-owned advisory services by sustaining 99% operational uptime across user-facing systems. Managed IT asset inventory across the department, contributing to budget accuracy and procurement planning. Translated end-user workflow needs into stable system solutions through structured root cause analysis — sharpening problem-framing skills directly applicable to client business process improvement in any banking customer engagement.
+        </p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Feb 2025 — May 2025</div>
+      <div>
+        <h3 class="exp-role">IT Support Specialist Intern — Banking Operations</h3>
+        <div class="exp-org">PT Bank Rakyat Indonesia (Persero) Tbk · Jakarta</div>
+        <p class="exp-desc">
+          Sustained operational continuity of core banking infrastructure including the ATM network, branch servers, and Core Banking System — directly supporting frontline officer productivity and uninterrupted customer transactions. Gained first-hand exposure to ISO 27001 controls, data protection protocols, and disaster recovery procedures within a regulated state-owned bank environment. Built foundational understanding of how branch-level reliability translates to customer trust and transactional revenue in retail banking.
+        </p>
+      </div>
+    </div>
+
+    <div class="exp-item">
+      <div class="exp-period">Jun 2023 — Aug 2023</div>
+      <div>
+        <h3 class="exp-role">Application Developer Intern — Internal Stakeholder Systems</h3>
+        <div class="exp-org">Dewan Perwakilan Rakyat Republik Indonesia · Jakarta</div>
+        <p class="exp-desc">
+          Delivered an end-to-end internal mobile attendance application for DPR RI employees, strengthening data integrity and reporting accuracy for HR decision-making. Engaged directly with internal stakeholders to translate operational workflow needs into a working digital solution — early exposure to requirement-gathering, user empathy, and on-time delivery against fixed institutional milestones.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-eyebrow">04 — Selected Projects</div>
+    <h2 class="section-title">Five projects that demonstrate readiness for <em>business banking work</em>.</h2>
+
+    <article class="project">
+      <div class="project-num">01</div>
+      <div class="project-body">
+        <h3 class="project-title">SME Credit Readiness Dashboard</h3>
+        <div class="project-meta">
+          <span class="project-tag">Data Analysis</span>
+          <span class="project-tag">UMKM Lending</span>
+          <span class="project-tag">Looker Studio</span>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Problem</div>
+          <p>Business banking teams often face difficulty assessing UMKM credit readiness because data is fragmented and informal. A simple readiness dashboard can support faster, more consistent first-pass screening.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Approach</div>
+          <p>Synthesized publicly available BPS and OJK data into a five-indicator readiness framework covering revenue stability, digital adoption, bookkeeping discipline, growth trend, and business permit status. Modeled twenty hypothetical UMKM profiles based on aggregate sector characteristics.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Relevance to BTN Business Banking</div>
+          <p>Directly applicable to KUR-style screening and pre-qualification workflows. Demonstrates credit screening intuition without requiring access to confidential customer data — a starting framework that can be refined with real underwriting policies.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-num">02</div>
+      <div class="project-body">
+        <h3 class="project-title">Local Business Financial Needs Mapping</h3>
+        <div class="project-meta">
+          <span class="project-tag">Primary Research</span>
+          <span class="project-tag">Customer Segmentation</span>
+          <span class="project-tag">UMKM</span>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Problem</div>
+          <p>UMKM owners across different regions have heterogeneous financial needs. A one-product-fits-all approach misses real customer pain points.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Approach</div>
+          <p>Conducted structured conversations with fifteen small business owners across Greater Jakarta, covering culinary, services, and retail segments. Mapped financial pain points against banking product fit, producing three customer personas with recommended product alignment.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Relevance to BTN Business Banking</div>
+          <p>Demonstrates ground-level customer-needs analysis directly relevant to relationship management roles. Output is a portable framework that can be adapted to regional contexts BTN ODP graduates may be placed in.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-num">03</div>
+      <div class="project-body">
+        <h3 class="project-title">Branch Banking Customer Journey Simulation</h3>
+        <div class="project-meta">
+          <span class="project-tag">Journey Mapping</span>
+          <span class="project-tag">KPR · KUR</span>
+          <span class="project-tag">Figma</span>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Problem</div>
+          <p>Customer experience friction often emerges at the seams between digital channels and physical branch touchpoints, especially for first-time KPR and KUR applicants.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Approach</div>
+          <p>Mapped end-to-end customer journeys for two BTN-relevant scenarios — a first-time KPR applicant and a UMKM owner applying for KUR — identifying ten friction points and corresponding improvement opportunities across digital and physical channels.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Relevance to BTN Business Banking</div>
+          <p>Demonstrates business design thinking and customer empathy beyond technical implementation. Shows readiness to contribute to branch-level customer experience initiatives from day one.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-num">04</div>
+      <div class="project-body">
+        <h3 class="project-title">Branch Banking Network Infrastructure Simulation</h3>
+        <div class="project-meta">
+          <span class="project-tag">Network Topology</span>
+          <span class="project-tag">Banking Security</span>
+          <span class="project-tag">Cisco Packet Tracer</span>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Problem</div>
+          <p>Branch banking operations depend on resilient, secure network infrastructure. Understanding this backbone helps business banking officers communicate effectively with IT and digital banking partners.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Approach</div>
+          <p>Designed and simulated a multi-branch banking network topology using Cisco Packet Tracer, modeling secure data flow between branch and headquarters with appropriate segmentation, firewall placement, and failover scenarios.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Relevance to BTN Business Banking</div>
+          <p>A differentiating capability — most business banking candidates cannot speak intelligently about branch infrastructure. This understanding helps in cross-functional collaboration with IT, operations, and digital teams.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-num">05</div>
+      <div class="project-body">
+        <h3 class="project-title">Digital Onboarding Journey for SME Customers</h3>
+        <div class="project-meta">
+          <span class="project-tag">Product Design</span>
+          <span class="project-tag">Onboarding UX</span>
+          <span class="project-tag">SME Banking</span>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Problem</div>
+          <p>Many UMKM owners disengage from formal banking services because onboarding feels complex and disconnected from their daily reality. Reducing first-experience friction is a critical lever for SME customer acquisition.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Approach</div>
+          <p>Designed an end-to-end digital onboarding journey for a hypothetical SME business banking product, covering eight customer-facing screens and the underlying decision flow. Applied customer-empathy design principles to reduce friction for first-time SME banking customers.</p>
+        </div>
+        <div class="project-block">
+          <div class="project-block-label">Relevance to BTN Business Banking</div>
+          <p>Aligned with BTN's digital banking transformation agenda. Demonstrates ability to think about acquisition funnel, customer experience, and product design — competencies increasingly valued in modern business banking officers.</p>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section id="leadership">
+  <div class="container">
+    <div class="section-eyebrow">05 — Leadership & Community Impact</div>
+    <h2 class="section-title">Three roles that built capacity in talent development, stakeholder management, and community engagement.</h2>
+
+    <div class="leadership-grid">
+
+      <div class="leader-card">
+        <h3 class="leader-role">Vice Manager of Human Resources</h3>
+        <div class="leader-org">Universitas Indonesia Achievement Community · Jun 2023 — Feb 2024</div>
+        <p class="leader-desc">
+          Led end-to-end recruitment of new board members through behavioral interviews and structured selection. Designed coaching and development programs that improved member engagement and retention. Partnered with senior management to align talent strategy with organizational vision — building managerial competency directly relevant to ODP cohort leadership.
+        </p>
+      </div>
+
+      <div class="leader-card">
+        <h3 class="leader-role">Vice President</h3>
+        <div class="leader-org">PIK-R Depok Jaya · Jul 2022 — Present</div>
+        <p class="leader-desc">
+          Acted as primary representative of the organization to local government stakeholders in Depok Jaya, coordinating multi-party community programs. Led a team of peer educators delivering training and counseling initiatives — direct experience in grassroots stakeholder engagement that translates well into regional economic development work.
+        </p>
+      </div>
+
+      <div class="leader-card">
+        <h3 class="leader-role">Public Relations Coordinator</h3>
+        <div class="leader-org">CCIT Squad · Jul 2022 — Jul 2023</div>
+        <p class="leader-desc">
+          Designed and executed marketing campaigns that increased student engagement and enrollment visibility for CCIT Universitas Indonesia. Managed external messaging across multiple channels, building practical experience in stakeholder communication and brand positioning — the same muscle business banking officers use in customer acquisition and relationship management.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="container">
+    <div class="section-eyebrow">06 — Certifications</div>
+    <h2 class="section-title">Continuous learning across data, project management, and digital fundamentals.</h2>
+
+    <ul class="cert-list">
+      <li class="cert-item">
+        <div class="cert-name">Google Data Analytics Professional Certificate</div>
+        <div class="cert-issuer">Google</div>
+      </li>
+      <li class="cert-item">
+        <div class="cert-name">Business Intelligence Essentials</div>
+        <div class="cert-issuer">IBM</div>
+      </li>
+      <li class="cert-item">
+        <div class="cert-name">Data Analysis with R Programming</div>
+        <div class="cert-issuer">Google</div>
+      </li>
+      <li class="cert-item">
+        <div class="cert-name">Project Management: Initiating and Planning Projects</div>
+        <div class="cert-issuer">University of California Irvine</div>
+      </li>
+      <li class="cert-item">
+        <div class="cert-name">AWS Cloud Practitioner Essentials</div>
+        <div class="cert-issuer">Amazon Web Services</div>
+      </li>
+      <li class="cert-item">
+        <div class="cert-name">Blockchain for Business Leaders</div>
+        <div class="cert-issuer">EC-Council</div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-eyebrow">07 — Contact</div>
+    <h2 class="section-title">Open to conversations about Officer Development Programs and Business Banking opportunities.</h2>
+    <p class="contact-lede">
+      I am actively preparing for Officer Development Program applications across BUMN banks, with a strong interest in Bank BTN's Business Banking track. Feel free to reach out for interviews, networking conversations, or further references.
+    </p>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item-label">Email</div>
+        <div class="contact-item-value"><a href="mailto:destrylia650@gmail.com">destrylia650@gmail.com</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">Phone</div>
+        <div class="contact-item-value"><a href="tel:+6285770562694">+62 857-7056-2694</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">LinkedIn</div>
+        <div class="contact-item-value"><a href="https://linkedin.com/in/destrylias" target="_blank" rel="noopener">linkedin.com/in/destrylias</a></div>
+      </div>
+      <div>
+        <div class="contact-item-label">Location</div>
+        <div class="contact-item-value"><span style="color:var(--cream);font-size:16px;font-weight:500;">Depok, Indonesia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    © 2026 Destry Lia Sulistyowati · Portfolio prepared for career exploration and professional networking
+  </div>
+</footer>
+
+<script>
+  // Subtle reveal on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
